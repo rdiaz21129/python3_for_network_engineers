@@ -3,13 +3,17 @@ import re
 
 # D8-FC-93-7B-67-7C  | Ricardo Wireless mac address
 
-userWindowsMacAdd = input("Enter Windows MAC address: ")
-print("Converting [" + userWindowsMacAdd + "] into a cisco mac address format. (i.e. abcd.eff1.42ab)")
+userWindowsMacAdd = input("\nEnter Windows MAC address\nExample: A1-B2-C3-D4-E5-F6\nMac address:")
+
+print("\nConverting [" + userWindowsMacAdd + "] into a cisco mac address format. (i.e. abcd.eff1.42ab)")
 
 # Windows Mac address to Regex output
 RegWindowsMacAdd = (re.findall(r'[0-9,A-Z].',userWindowsMacAdd))
-# print(RegWindowsMacAdd)
+print(RegWindowsMacAdd)
+print ("\n---\n")
 
+str_winRegMacAdd = "".join(RegWindowsMacAdd)
+print ("Converting Regex output [RegWindowsMacAdd] into lowercase string so we can later slice the 12 characters into 3 parts " + str_winRegMacAdd.lower())
 
 
 """
