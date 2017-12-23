@@ -3,6 +3,7 @@ import re
 
 # By: Ricardo Diaz
 # Update: 20171223
+# File: windowsMac_to_ciscoMac.py
 # Python 3.6
 
 # Prompt the user to enter a windows format mac address | D8-FC-93-7B-67-7C  | Ricardo Wireless mac address
