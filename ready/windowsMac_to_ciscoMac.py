@@ -15,7 +15,7 @@ print ("===" * 4)
 print("\nConverting [" + userWindowsMacAdd + "] into a cisco mac address format. (example: abcd.eff1.42ab)")
 
 # Windows Mac address to Regex output
-RegWindowsMacAdd = (re.findall(r'[0-9,A-Z].',userWindowsMacAdd))
+RegWindowsMacAdd = (re.findall(r'[0-9,A-Z,a-z].',userWindowsMacAdd))
 
 # Printing the regex output (in an array/list)
 print(RegWindowsMacAdd)
