@@ -1,14 +1,30 @@
 # Dev Area
 
+def testFunction():
+    print ("testing function")
+
+testFunction()
+
+userLetter = input("Type in a letter: ")
+print ("The letter that you entred was: [" + userLetter + "]\n")
+
+if userLetter in ['r', 'R']:
+    print ("Ricardo starts with the letter [R]")
+elif userLetter in ['i', 'I']:
+    print ("India starts with the letter [I]")
+else:
+    print ("You entered a letter that sucks\n")
+
+"""
 firstName = input ("what is your name? : ")
 print ("Hello " + firstName + ", this is a dev area")
 print ("python 3 works")
 
 print ("This is the first line\nThis is the second line")
 
+print ("adskfljdsaf")
 
 
-"""
 windowsMacAdd = ("AB-23-CE-24-7A-B8")
 print ("Windows MAC address is --> " + windowsMacAdd)
 
