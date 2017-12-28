@@ -1,5 +1,17 @@
 # Dev Area
 
+
+y = 10
+x = input("enter a number that you would like to get added by 10: ")
+
+#print (y + int(x))
+
+
+
+testMath()
+
+'''
+
 def testFunction():
     print ("testing function")
 
@@ -15,7 +27,7 @@ elif userLetter in ['i', 'I']:
 else:
     print ("You entered a letter that sucks\n")
 
-"""
+
 firstName = input ("what is your name? : ")
 print ("Hello " + firstName + ", this is a dev area")
 print ("python 3 works")
@@ -40,10 +52,10 @@ print ("Converting regex output to a string --> " + str_RegMacAdd)
 #print ("cisco mac address format: ") + (str_RegMacAdd[:4].lower()) + (".") + (str_RegMacAdd[4:8].lower()) + (".") + (str_RegMacAdd[8:12].lower())
 print("cisco mac address format: " + str_RegMacAdd[:4].lower() + "." + str_RegMacAdd[4:8].lower() + "." + str_RegMacAdd[8:12].lower())
 print("##" * 12)
-"""
 
 
-'''
+
+
 print
 print ("=== DEV AREA ===")
 print ("==" * 10)

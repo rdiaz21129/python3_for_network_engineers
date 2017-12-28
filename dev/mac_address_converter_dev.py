@@ -6,8 +6,12 @@
 import re
 
 # Functions
-def windowsMacDef():
-    print ("testing windows function")
+def windowsMacDef(userMacAdd):
+    #print ("testing windows function")
+    print ("\nNow converting [" + userMacAdd + "]")
+    regexMAC = (re.findall(r'[0-9,A-Z,a-z].',userMacAdd))
+    print ("Below is the printed regex output")
+    print (regexMAC)
 
 def linuxMacDef():
     print ("testing linux function")
@@ -25,19 +29,19 @@ print ("Purpose of this program is to convert any mac address (regardless of for
 # Examples/list of mac address formats
 print ("\n# MAC address format examples per vendor\nw. D8-FC-93-7B-67-7C - Windows\nl. 8c:85:90:1a:87:c5 - Linux\nc. d8fc.937b.677c - Cisco\nu. D8FC937B677C or d8fc937b677c - Manual User\n")
 
-# User input | desired mac address output
+# User input | ask user for desired mac address output
 userLetterSelection = input("From the above list, please select the desired MAC address output: ")
 print ("[" + userLetterSelection + "] is what you have selected")
 
-# User input | enter mac address in any format
-#userMacAdd = input ("Enter MAC address(regardless of format): ")
-#TEST print (userMacAdd)
+# User input | user to enter mac address in any format
+userMacAdd = input ("\nEnter MAC address(regardless of format): ")
+#TESTprint (userMacAdd)
 
 
 # If statements
 if userLetterSelection in ['w', 'W']:
     print ("You have selected Windows")
-    windowsMacDef()
+    windowsMacDef(userMacAdd)
 elif userLetterSelection in ['l', 'L']:
     print ("You have selected Linux")
     linuxMacDef()
