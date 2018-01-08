@@ -10,6 +10,8 @@ switch_config_file = open("ex_switch_config", "r")
 
 # Sends output of open file to a variable called = switch_config_fileOutput
 switch_config_fileOutput = switch_config_file.read()
+
+# Close file
 switch_config_file.close()
 
 print (switch_config_fileOutput)
