@@ -1,14 +1,26 @@
 # Dev Area
 
 
-y = 10
-x = input("enter a number that you would like to get added by 10: ")
+def main():
+    # read file
+    file = open("sample_txt_file", "r")
+    lines = file.readlines()
+    file.close()
+
+    # look for patterns
+    for line in lines:
+        print (line)
+
+main()
+
+#y = 10
+#x = input("enter a number that you would like to get added by 10: ")
 
 #print (y + int(x))
 
 
 
-testMath()
+#testMath()
 
 '''
 
