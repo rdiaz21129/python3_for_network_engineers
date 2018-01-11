@@ -8,8 +8,17 @@ def main():
     file.close()
 
     # look for patterns
+    countYES = 0
+    countNO = 0
     for line in lines:
-        print (line)
+        line = line.strip()
+        #print (line)
+        if line.find("YES") != -1:
+            countYES = countYES + 1
+        if line.find("NOW") != -1:
+            countNO = countNO + 1
+
+    print ("Yes: ",  countYES)  
 
 main()
 
