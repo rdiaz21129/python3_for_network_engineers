@@ -1,5 +1,10 @@
-YES
-NO
-YES
-YES
-NO
+line 1 YES
+line 2 YES
+line 3 NO
+line 4 NO, and has string Ricardo
+line 5 YES, and has string Ricardo
+Ricardo and lucy
+line 7 Ricardo and lucy
+line 8
+line 9 xxRicardoxx and lucy
+Ricardo f

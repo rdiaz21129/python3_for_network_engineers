@@ -10,15 +10,26 @@ def main():
     # look for patterns
     countYES = 0
     countNO = 0
+    countRicardo_lucy = 0
     for line in lines:
         line = line.strip()
         #print (line)
-        if line.find("YES") != -1:
-            countYES = countYES + 1
-        if line.find("NOW") != -1:
-            countNO = countNO + 1
+        if line.find("Ricardo") != -1 and len(line) ==7:
+            countRicardo_lucy = countRicardo_lucy + 1
+            print (line)
 
-    print ("Yes: ",  countYES)  
+
+    print ("\nRicardo and lucy count: ", countRicardo_lucy, "\n")
+
+        #if line.find("YES") != -1:
+            #countYES = countYES + 1
+            #print (line)
+        #if line.find("NO") != -1:
+            #countNO = countNO + 1
+
+
+    #print ("Yes: ", countYES)
+    #print ("NO: ", countNO)
 
 main()
 
