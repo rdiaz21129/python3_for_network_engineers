@@ -1,6 +1,23 @@
 # Dev Area
 
 
+user_ip_address = 1
+
+
+#user_ip_address = input ("Enter ip address or starting octet that you want to EXCLUDE from the search: ")
+
+
+while user_ip_address > 0:
+    user_ip_address = input ("Enter ip address or starting octet that you want to EXCLUDE from the search: ")
+    if len(user_ip_address) < 0:
+        print ("You entered something that is less than zero")
+        break
+    print (user_ip_address)
+
+
+
+
+"""
 def main():
     # read file
     file = open("sample_txt_file", "r")
@@ -31,7 +48,7 @@ def main():
     #print ("Yes: ", countYES)
     #print ("NO: ", countNO)
 
-main()
+#main()
 
 #y = 10
 #x = input("enter a number that you would like to get added by 10: ")
@@ -101,4 +118,4 @@ print (str_mac_add[8:12])
 print ("Cisco MAC Address format --> ") + (str_mac_add[:4]) + (".") + (str_mac_add[4:8]) + (".") + (str_mac_add[8:12])
 #print ("cisco mac format ---> " + str_mac_add[:4] + "." + str_mac_add[4:8] + "." str_mac_add[8:12])
 print ("==" * 10)
-'''
+"""
