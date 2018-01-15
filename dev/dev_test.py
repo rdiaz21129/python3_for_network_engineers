@@ -5,7 +5,7 @@ user_ip_address = 1
 
 
 #user_ip_address = input ("Enter ip address or starting octet that you want to EXCLUDE from the search: ")
-
+# TEST FROM WORK VM
 
 while user_ip_address > 0:
     user_ip_address = input ("Enter ip address or starting octet that you want to EXCLUDE from the search: ")
