@@ -1,18 +1,25 @@
 # Dev Area
 
 
-user_ip_address = 1
+user_ip_address_list = [] #Create empty list
+list_counter = 0
+
+while 1 > 0:
+    user_ip_address = input ("\nEnter ip address or starting octet that you want to EXCLUDE from the search: ")
+
+    if len(user_ip_address) <= 0:
+        print ("\n**You entered something that is less than zero**")
+        print ("Number of times you entered something: ", list_counter, "\n")
+        print ("list: ", user_ip_address_list) # print list when complete
+        break #STOP THE WHILE LOOP
+
+    else:
+        user_ip_address_list.insert(list_counter, user_ip_address) # adding to list
+        list_counter = list_counter + 1
+        print ("Adding [",user_ip_address,"] to list\n")
 
 
-#user_ip_address = input ("Enter ip address or starting octet that you want to EXCLUDE from the search: ")
-# TEST FROM WORK VM after entering keys
 
-while user_ip_address > 0:
-    user_ip_address = input ("Enter ip address or starting octet that you want to EXCLUDE from the search: ")
-    if len(user_ip_address) < 0:
-        print ("You entered something that is less than zero")
-        break
-    print (user_ip_address)
 
 
 

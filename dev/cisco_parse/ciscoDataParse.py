@@ -1,24 +1,34 @@
 # Ricardo Diaz
-# 20170113
+# 20170115
 # Python 3.6
+# Purpose: Parse cisco syslog messages/ACL logs
 
 # Import mondules
 import re,sys
 
-#ip_address = input ("Enter IP address: ")
-#print(ip_address)
-
+# Define Function
 def exclude_ip():
-    print ("\nEnter ip address or starting octet that you want to EXCLUDE from the search")
-    #user_ip_address = input ("Enter IP address: ") # IP address we want to search
-    user_ip_address = []
 
-## WORK ON THIS!!!!!
-    while True:
-        user_ip_address = input ("Enter ip address or starting octet that you want to EXCLUDE from the search")
-        if user_ip_address.len() < 0:
-            break
+    # Variables for the below while loop
+    user_ip_address_list = [] #Created empty list that will get populated
+    list_counter = 0 #variable that will be used in the below while loop
 
+    while 1 > 0:
+        user_ip_address = input ("\n(enter nothing to exit)\nEnter ip address or starting octet that you want to EXCLUDE from the search: ")
+
+        # stop/brake while loop condition
+        if len(user_ip_address) <= 0:
+            print ("\n**You entered something that is less than zero**")
+            print ("Number of times you entered something: ", list_counter, "\n")
+            print ("complete list: ", user_ip_address_list) # print list when complete
+            break #STOP THE WHILE LOOP
+
+        else:
+            user_ip_address_list.insert(list_counter, user_ip_address) # adding to list
+            list_counter = list_counter + 1
+            print ("Adding [",user_ip_address,"] to list\n")
+
+    # OPEN/CLOSE FILE
     # Opens the file "syslog_data_1" in read mode "r"
     syslog_data_file = open("syslog_data_real", "r")
 
@@ -35,8 +45,9 @@ def exclude_ip():
     for ip_address in syslog_data_fileOutput:
         ip_address = ip_address.strip()  # remove any blank lines
 
+#### TypeError: must be str, not list ####
         # find, if the string is in the file == 0 IF NOT == -1
-        if ip_address.find(user_ip_address) != -1:
+        if ip_address.find(user_ip_address_list) != -1:
             #print(ip_address)
             count_ip_address = count_ip_address + 1
         else:
@@ -46,5 +57,5 @@ def exclude_ip():
 
 
 
-
+# Call function
 exclude_ip()
