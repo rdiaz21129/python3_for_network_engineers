@@ -1,7 +1,7 @@
 # Ricardo Diaz
 # 20170115
 # Python 3.6
-# Purpose: Parse cisco syslog messages/ACL logs
+# Purpose: Parse cisco syslog messages/ACL logs. Functions include excluding or including ip addresses
 
 # Import mondules
 import re,sys
