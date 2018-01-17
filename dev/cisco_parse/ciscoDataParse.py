@@ -38,6 +38,7 @@ def exclude_ip():
     # Close file
     syslog_data_file.close()
 
+
     # counters
     count_ip_address = 0
 
@@ -47,6 +48,7 @@ def exclude_ip():
 
 #### TypeError: must be str, not list ####
         # find, if the string is in the file == 0 IF NOT == -1
+        print (user_ip_address_list)
         if ip_address.find(user_ip_address_list) != -1:
             #print(ip_address)
             count_ip_address = count_ip_address + 1
