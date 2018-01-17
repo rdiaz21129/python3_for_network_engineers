@@ -20,7 +20,7 @@ def exclude_ip():
     syslog_data_file.close()
 
 
-    # Variables for the below while loop
+    # Variables for the below while loop | Asks the user to ip addresses or start of prifix
     user_ip_address_list = [] #Created empty list that will get populated
     list_counter = 0 #variable that will be used in the below while loop
 
@@ -40,10 +40,13 @@ def exclude_ip():
             print ("Adding [",user_ip_address,"] to list\n")
 
 
-    # =============================
+    # 3.
     # counters
     count_ip_address = 0
     x = 0
+    lenOfuser_ip_address_list = len(user_ip_address_list)
+    print ("LEN OF USER INPUT LIST: ", lenOfuser_ip_address_list)
+    #print ("**TEST** PRINTING user_ip_address_list index 0", user_ip_address_list[0])
     #print (user_ip_address_list[0]) # should print first user input
     for ip_address in syslog_data_fileOutput:
         ip_address = ip_address.strip()  # remove any blank lines
