@@ -9,6 +9,17 @@ import re,sys
 # Define Function
 def exclude_ip():
 
+    # OPEN/CLOSE SYSLOG FILE
+    # Opens the file "syslog_data_1" in read mode "r"
+    syslog_data_file = open("syslog_data_real", "r")
+
+    # Sends output of open file to a variable called = switch_config_fileOutput
+    syslog_data_fileOutput = syslog_data_file.readlines()
+
+    # Close file
+    syslog_data_file.close()
+
+
     # Variables for the below while loop
     user_ip_address_list = [] #Created empty list that will get populated
     list_counter = 0 #variable that will be used in the below while loop
@@ -28,28 +39,18 @@ def exclude_ip():
             list_counter = list_counter + 1
             print ("Adding [",user_ip_address,"] to list\n")
 
-    # OPEN/CLOSE SYSLOG FILE
-    # Opens the file "syslog_data_1" in read mode "r"
-    syslog_data_file = open("syslog_data_real", "r")
 
-    # Sends output of open file to a variable called = switch_config_fileOutput
-    syslog_data_fileOutput = syslog_data_file.readlines()
-
-    # Close file
-    syslog_data_file.close()
-
-
+    # =============================
     # counters
     count_ip_address = 0
-
-    #print (switch_config_fileOutput)
+    x = 0
+    #print (user_ip_address_list[0]) # should print first user input
     for ip_address in syslog_data_fileOutput:
         ip_address = ip_address.strip()  # remove any blank lines
-
+        x = x+1
 #### TypeError: must be str, not list ####
         # find, if the string is in the file == 0 IF NOT == -1
-        print (user_ip_address_list)
-        if ip_address.find(user_ip_address_list) != -1:
+        if ip_address.find(user_ip_address_list[x]) != -1:
             #print(ip_address)
             count_ip_address = count_ip_address + 1
         else:
