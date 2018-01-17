@@ -1,7 +1,7 @@
 # Ricardo Diaz
 # 20170115
 # Python 3.6
-# Purpose: Parse cisco syslog messages/ACL logs
+# Purpose: Parse cisco syslog messages/ACL logs. Functions include excluding or including ip addresses
 
 # Import mondules
 import re,sys
@@ -28,7 +28,7 @@ def exclude_ip():
             list_counter = list_counter + 1
             print ("Adding [",user_ip_address,"] to list\n")
 
-    # OPEN/CLOSE FILE
+    # OPEN/CLOSE SYSLOG FILE
     # Opens the file "syslog_data_1" in read mode "r"
     syslog_data_file = open("syslog_data_real", "r")
 
