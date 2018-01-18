@@ -44,20 +44,25 @@ def exclude_ip():
     # counters
     count_ip_address = 0
     x = 0
+
+    # get count of items/values in list/array, staring at 1
     lenOfuser_ip_address_list = len(user_ip_address_list)
+
+
+
     print ("LEN OF USER INPUT LIST: ", lenOfuser_ip_address_list)
     #print ("**TEST** PRINTING user_ip_address_list index 0", user_ip_address_list[0])
     #print (user_ip_address_list[0]) # should print first user input
-    for ip_address in syslog_data_fileOutput:
-        ip_address = ip_address.strip()  # remove any blank lines
+    for ip_addresses in syslog_data_fileOutput:
+        ip_addresses = ip_addresses.strip()  # remove any blank lines
         x = x+1
 #### TypeError: must be str, not list ####
         # find, if the string is in the file == 0 IF NOT == -1
-        if ip_address.find(user_ip_address_list[x]) != -1:
+        if ip_addresses.find(user_ip_address_list[x]) != -1:
             #print(ip_address)
             count_ip_address = count_ip_address + 1
         else:
-            print (ip_address)
+            print (ip_addresses)
     print ("\nIP address [", user_ip_address, "] showed up: [", count_ip_address,  "] times and was not printed")
 
 
