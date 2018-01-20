@@ -1,9 +1,11 @@
+
+# URL: https://pynet.twb-tech.com/blog/automation/netmiko-proxy.html
 #!/usr/bin/env python
 
 from netmiko import ConnectHandler
 from getpass import getpass
 
-ip_addr = raw_input("Enter IP Address: ").strip()
+ip_addr = input("Enter IP Address: ").strip()
 password = getpass()
 
 cisco = {
@@ -21,4 +23,4 @@ output = net_connect.send_command('show users')
 print output
 print
 print net_connect.find_prompt()
-print 
+print
