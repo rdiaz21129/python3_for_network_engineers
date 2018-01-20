@@ -1,10 +1,9 @@
 
 # URL: https://pynet.twb-tech.com/blog/automation/netmiko-proxy.html
-#!/usr/bin/env python
+
 
 from netmiko import ConnectHandler
 from getpass import getpass
-
 
 def cisco_output_to_file():
     f = open('cisco.txt', 'w')
@@ -12,6 +11,10 @@ def cisco_output_to_file():
     f.close()
 
 openNewFile = cisco_output_to_file()
+
+
+def cisco_commands():
+    print ('test')
 
 # prompt the user to enter an ip address
 ip_addr = input("Enter IP Address: ").strip()
@@ -37,6 +40,8 @@ cisco_output = net_connect.send_command('show int status')
 
 # Print output of the cisco output on the terminal
 #print (output)
+
+
 
 print (openNewFile)
 
