@@ -2,6 +2,8 @@
 #prompt the user for number, number of lines that will be created in a file
 user_range_input = int(input("Enter number of lines you want created: "))
 
+food_list = ['pizza', 'tacos', 'burgers']
+
 # Define function that will create lines
 # 1
 def createLines(y):
@@ -9,7 +11,7 @@ def createLines(y):
     for i in range(y):
         x_count+=1
         print ("This is line", x_count)
-        
+
 
 functionOneOutput = createLines
 
@@ -19,5 +21,6 @@ functionOneOutput = createLines
 #'''
 f = open("createdFile.txt", "w")
 f.write(str(functionOneOutput(user_range_input)))
+# f.write(food_list) #TypeError: write() argument must be str, not list
 f.close()
 #'''
