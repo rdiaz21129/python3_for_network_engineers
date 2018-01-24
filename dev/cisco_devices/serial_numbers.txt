@@ -1,0 +1,11 @@
+this is a line that has a serial number FGL16422607
+FDO1441P0CR
+ricardo had beer and pizza over the weekend.
+
+192.168.3.1
+list will contain the following
+  beer
+  pizza
+  tacos
+This is a sentence that has both pizza and tacos
+beer and beer
