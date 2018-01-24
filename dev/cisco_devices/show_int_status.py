@@ -36,7 +36,7 @@ cisco = {
 net_connect = ConnectHandler(**cisco)
 
 # Creates a var that is the output/result of (connecting to the device via ssh, and the commands that are send)
-cisco_output = net_connect.send_command('show int status')
+cisco_output = net_connect.send_command('show inventory')
 
 # Print output of the cisco output on the terminal
 #print (output)
